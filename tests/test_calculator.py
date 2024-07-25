@@ -29,3 +29,16 @@ def test_scitani_add(x, y, result):
 
 def test_odcitani_subtract(x, y, result):
     assert calculator.subtract(x,y) == result
+
+@pytest.mark.parametrize(
+    "x, y, result",
+    [
+        (2, 3, 6),
+        (2, 15, 30),
+        (-1, -1, 1),
+        (0, 2, 0)
+    ],
+)
+
+def test_nasobeni_multiply(x, y, result):
+    assert calculator.multiply(x, y) == result
