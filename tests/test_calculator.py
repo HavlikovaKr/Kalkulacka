@@ -11,7 +11,21 @@ from src import calculator
     ],
 )
 
+
 def test_scitani_add(x, y, result):
     assert calculator.add(x, y) == result
 
 
+@pytest.mark.parametrize(
+    "x, y, result",
+    [
+        (5, 3, 2),
+        (-1, -1, 0),
+        (8, 3, 5),
+        (0, 5, -5)
+
+    ],
+)
+
+def test_odcitani_subtract(x, y, result):
+    assert calculator.subtract(x,y) == result
