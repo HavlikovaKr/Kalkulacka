@@ -16,6 +16,8 @@ def test_scitani_add(x, y, result):
     assert calculator.add(x, y) == result
 
 
+
+
 @pytest.mark.parametrize(
     "x, y, result",
     [
@@ -30,6 +32,8 @@ def test_scitani_add(x, y, result):
 def test_odcitani_subtract(x, y, result):
     assert calculator.subtract(x,y) == result
 
+
+
 @pytest.mark.parametrize(
     "x, y, result",
     [
@@ -42,3 +46,21 @@ def test_odcitani_subtract(x, y, result):
 
 def test_nasobeni_multiply(x, y, result):
     assert calculator.multiply(x, y) == result
+
+
+
+@pytest.mark.parametrize(
+    "x, y, result",
+    [
+        (6, 3, 2),
+        (-1, -1, 1),
+        (9, 3, 3),
+        (2, 0, "Error! Division by zero."),
+        (8, 3, 2.7)
+
+    ],
+)
+
+def test_deleni_divide(x, y, result):
+    assert calculator.divide(x, y) == result
+
